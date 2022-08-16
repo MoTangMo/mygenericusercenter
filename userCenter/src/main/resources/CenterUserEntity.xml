@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="https://jakarta.ee/xml/ns/persistence/orm"
+                 version="3.0">
+
+    <entity class="com.example.usercenter.entity.CenterUserEntity">
+        <table name="center_user" schema="userCenter" catalog=""/>
+        <attributes>
+            <id name="userid">
+                <column name="userid" precision="-1"/>
+            </id>
+            <basic name="phonenumber">
+                <column name="phonenumber" length="11"/>
+            </basic>
+            <basic name="nickname">
+                <column name="nickname"/>
+            </basic>
+            <basic name="userpassword">
+                <column name="userpassword" nullable="false" length="32"/>
+            </basic>
+            <basic name="salt">
+                <column name="salt" nullable="false" length="10"/>
+            </basic>
+            <basic name="userstatus">
+                <column name="userstatus" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="sex">
+                <column name="sex" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="headimage">
+                <column name="headimage" nullable="false" length="60"/>
+            </basic>
+            <basic name="mail">
+                <column name="mail" nullable="false" length="60"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>
